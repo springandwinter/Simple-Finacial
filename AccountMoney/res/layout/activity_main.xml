@@ -1,0 +1,478 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    xmlns:tools="http://schemas.android.com/tools"  
+    android:id="@+id/id_drawerlayout"  
+    android:background="#F5F5F5"
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent" >  
+ 
+    <!-- 主界面布局 -->
+   
+    <TabHost  
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:id="@+id/tabs"
+     > 
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+    >
+    
+    <TabWidget 
+        android:paddingTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@layout/tab_color"
+        android:textSize="20sp"
+        android:id="@android:id/tabs"
+        > 
+    </TabWidget>
+    
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@android:id/tabcontent"
+        >
+        <!-- 新增收入 -->   
+		<RelativeLayout  
+		    android:id="@+id/shouru" 
+		    android:layout_width="match_parent"  
+		    android:layout_height="match_parent"  
+		    android:paddingBottom="@dimen/activity_vertical_margin"  
+		    android:paddingLeft="@dimen/activity_horizontal_margin"  
+		    android:paddingRight="@dimen/activity_horizontal_margin"  
+		    android:paddingTop="@dimen/activity_vertical_margin"  
+		    tools:context=".HomeActivity">
+
+		  <LinearLayout 
+				android:orientation="vertical"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="3" 
+				>
+				<TextView 
+					android:layout_width="wrap_content"
+					android:layout_gravity="center"
+					android:gravity="center_horizontal"
+					android:text="流入钱包"
+					android:textSize="30sp"
+					android:layout_height="wrap_content"/>
+			</LinearLayout>
+			<LinearLayout 
+				    android:orientation="vertical"
+				    android:layout_width="fill_parent"
+				    android:layout_height="fill_parent"
+				   	android:layout_weight="1"
+				   	android:layout_marginTop="40dip" >
+			
+					<RelativeLayout
+					    android:layout_width="fill_parent"
+					    android:layout_height="fill_parent"
+					    android:padding="30dp" >
+			
+					    <TextView
+					        android:id="@+id/tvLiuruMoney"
+					        android:layout_width="80dp"
+					        android:layout_height="wrap_content"
+					        android:layout_alignBaseline="@+id/txtLiuruMoney"
+					        android:layout_alignBottom="@+id/txtLiuruMoney"
+					        android:layout_alignParentLeft="true"
+					        android:layout_marginLeft="16dp"
+					        android:text="金 额："
+					        android:textSize="18sp" />
+			
+					    <EditText
+					        android:id="@+id/txtLiuruMoney"
+					        android:layout_width="210dp"
+					        android:layout_height="wrap_content"
+					        android:layout_alignParentRight="true"
+					        android:layout_toRightOf="@id/tvLiuruMoney"
+					        android:hint="0.00"
+					        android:inputType="number"
+					        android:maxLength="12" 
+					        android:numeric="integer" />
+			
+					    <TextView
+					        android:id="@+id/tvLiuruTime"
+					        android:layout_width="80dp"
+					        android:layout_height="wrap_content"
+					        android:layout_alignBaseline="@+id/txtLiuruTime"
+					        android:layout_alignBottom="@+id/txtLiuruTime"
+					        android:layout_toLeftOf="@+id/txtLiuruMoney"
+					        android:text="时 间："
+					        android:textSize="18sp"/>
+			
+					    <EditText
+					        android:id="@+id/txtLiuruTime"
+					        android:layout_width="210dp"
+					        android:layout_height="wrap_content"
+					        android:layout_alignParentRight="true"
+					        android:layout_below="@id/txtLiuruMoney"
+					        android:layout_toRightOf="@id/tvLiuruTime"
+					        android:hint="2015-11-11"
+					        android:inputType="datetime" />
+			
+					    <TextView
+					        android:id="@+id/tvLiuruType"
+					        android:layout_width="80dp"
+					        android:layout_height="wrap_content"
+					        android:layout_alignBaseline="@+id/spLiuruType"
+					        android:layout_alignBottom="@+id/spLiuruType"
+					        android:layout_alignLeft="@+id/tvLiuruTime"
+					        android:text="类 型："
+					        android:textSize="18sp" />
+			
+					    <Spinner
+					        android:id="@+id/spLiuruType"
+					        android:layout_width="210dp"
+					        android:layout_height="wrap_content"
+					        android:layout_below="@id/txtLiuruTime"
+					        android:layout_toRightOf="@id/tvLiuruType"
+					        android:entries="@array/spLiuruType" />
+			
+					    <TextView 
+					        android:id="@+id/tvfukuanf"
+					        android:layout_width="80dp"
+					        android:layout_height="wrap_content"
+					        android:layout_alignBaseline="@+id/txtfukuanf"
+					        android:layout_alignBottom="@+id/txtfukuanf"
+					        android:layout_alignLeft="@+id/tvLiuruType"
+					        android:text="付款方："
+					        android:textSize="18sp" />
+						<EditText
+					        android:id="@+id/txtfukuanf"
+					        android:layout_width="210dp"
+					        android:layout_height="wrap_content"
+					        android:layout_alignParentRight="true"
+					        android:layout_below="@id/spLiuruType"
+					        android:layout_toRightOf="@+id/tvfukuanf" 
+					      />  
+					     <EditText
+					        android:id="@+id/txtLiuruBeizhu"
+					        android:layout_width="80dp"
+					        android:layout_height="wrap_content"
+					        android:layout_alignParentLeft="true"
+					        android:layout_alignRight="@+id/spLiuruType"
+					        android:layout_below="@+id/tvLiuruType"
+					        android:layout_marginTop="37dp"
+					        android:ems="10" 
+					        android:hint="请填写备注信息"
+					        android:textColor="#00ff7f"
+					        android:textSize="16sp" />
+			
+					    <Button
+					        android:id="@+id/LiuruOK"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_alignLeft="@+id/txtLiuruBeizhu"
+					        android:layout_alignParentBottom="true"
+					        android:background="@layout/shape1"
+					        android:text="添加" />
+			
+					    <Button
+					        android:id="@+id/LiuchuCancel"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_alignBaseline="@+id/LiuruOK"
+					        android:layout_alignBottom="@+id/LiuruOK"
+					        android:layout_alignParentRight="true"
+					         android:background="@layout/shape2"
+					        android:text="取消" />
+			
+					</RelativeLayout>
+				    
+				</LinearLayout>
+</RelativeLayout>   
+      <!-- 新增支出 -->
+		<RelativeLayout  
+		    android:id="@+id/zhichu" 
+		    android:layout_width="match_parent"  
+		    android:layout_height="match_parent"  
+		    android:paddingBottom="@dimen/activity_vertical_margin"  
+		    android:paddingLeft="@dimen/activity_horizontal_margin"  
+		    android:paddingRight="@dimen/activity_horizontal_margin"  
+		    android:paddingTop="@dimen/activity_vertical_margin"  
+		    tools:context=".HomeActivity">
+
+		  <LinearLayout 
+				android:orientation="vertical"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="3" 
+				>
+				<TextView 
+					android:layout_width="wrap_content"
+					android:layout_gravity="center"
+					android:gravity="center_horizontal"
+					android:text="流出钱包"
+					android:textSize="30sp"
+					android:layout_height="wrap_content"/>
+			</LinearLayout>
+			<LinearLayout 
+				    android:orientation="vertical"
+				    android:layout_width="fill_parent"
+				    android:layout_height="fill_parent"
+				   	android:layout_weight="1"
+				   	android:layout_marginTop="40dip" >
+			
+					<RelativeLayout
+					    android:layout_width="fill_parent"
+					    android:layout_height="fill_parent"
+					    android:padding="30dp" >
+			
+					    <TextView
+					        android:id="@+id/tvMoney"
+					        android:layout_width="80dp"
+					        android:layout_height="wrap_content"
+					        android:layout_alignBaseline="@+id/txtMoney"
+					        android:layout_alignBottom="@+id/txtMoney"
+					        android:layout_alignParentLeft="true"
+					        android:layout_marginLeft="16dp"
+					        android:text="金 额："
+					        android:textSize="18sp" />
+			
+					    <EditText
+					        android:id="@+id/txtMoney"
+					        android:layout_width="210dp"
+					        android:layout_height="wrap_content"
+					        android:layout_alignParentRight="true"
+					        android:layout_toRightOf="@id/tvMoney"
+					        android:hint="0.00"
+					        android:inputType="number"
+					        android:maxLength="12" 
+					        android:numeric="integer" />
+			
+					    <TextView
+					        android:id="@+id/tvTime"
+					        android:layout_width="80dp"
+					        android:layout_height="wrap_content"
+					        android:layout_alignBaseline="@+id/txtTime"
+					        android:layout_alignBottom="@+id/txtTime"
+					        android:layout_toLeftOf="@+id/txtMoney"
+					        android:text="时 间："
+					        android:textSize="18sp"/>
+			
+					    <EditText
+					        android:id="@+id/txtTime"
+					        android:layout_width="210dp"
+					        android:layout_height="wrap_content"
+					        android:layout_alignParentRight="true"
+					        android:layout_below="@id/txtMoney"
+					        android:layout_toRightOf="@id/tvTime"
+					        android:hint="2015-11-11"
+					        android:inputType="datetime" />
+			
+					    <TextView
+					        android:id="@+id/tvType"
+					        android:layout_width="80dp"
+					        android:layout_height="wrap_content"
+					        android:layout_alignBaseline="@+id/spType"
+					        android:layout_alignBottom="@+id/spType"
+					        android:layout_alignLeft="@+id/tvTime"
+					        android:text="类 别："
+					        android:textSize="18sp"/>
+			
+					    <Spinner
+					        android:id="@+id/spType"
+					        android:layout_width="210dp"
+					        android:layout_height="wrap_content"
+					        android:layout_below="@id/txtTime"
+					        android:layout_toRightOf="@id/tvType"
+					        android:entries="@array/type" />
+			
+					    <TextView
+					        android:id="@+id/tvTzhifu"
+					        android:layout_width="80dp"
+					        android:layout_height="wrap_content"
+					        android:layout_alignBaseline="@+id/zhifuType"
+					        android:layout_alignBottom="@+id/zhifuType"
+					        android:layout_alignLeft="@+id/tvType"
+					        android:text="支 付："
+					        android:textSize="18sp"/>
+			
+					    <Spinner
+					        android:id="@+id/zhifuType"
+					        android:layout_width="210dp"
+					        android:layout_height="wrap_content"
+					        android:layout_below="@id/spType"
+					        android:layout_toRightOf="@id/tvTzhifu"
+					        android:entries="@array/zhifutype" />
+			
+					    <EditText
+					        android:id="@+id/txtBeizhu"
+					        android:layout_width="80dp"
+					        android:layout_height="wrap_content"
+					        android:layout_alignParentLeft="true"
+					        android:layout_alignRight="@+id/zhifuType"
+					        android:layout_below="@+id/tvTzhifu"
+					        android:layout_marginTop="26dp"
+					        android:ems="10"
+					        android:hint="请填写备注信息"
+					        android:textColor="#00ff7f"
+					        android:textSize="16sp" />
+			
+					    <Button
+					        android:id="@+id/OK"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_alignLeft="@+id/txtBeizhu"
+					        android:layout_alignParentBottom="true"
+					        android:background="@layout/shape1"
+					        android:text="添加" />
+			
+					    <Button
+					        android:id="@+id/Cancel"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_alignBaseline="@+id/OK"
+					        android:layout_alignBottom="@+id/OK"
+					        android:background="@layout/shape2"
+					        android:layout_alignParentRight="true"
+					        android:text="取消" />
+			
+					</RelativeLayout>
+				    
+				</LinearLayout>
+</RelativeLayout>  
+<!--便签  -->
+<RelativeLayout  
+    android:id="@+id/bianqian" 
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    android:paddingBottom="@dimen/activity_vertical_margin"  
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"  
+    android:paddingTop="@dimen/activity_vertical_margin"  
+    tools:context=".HomeActivity" >  
+       <EditText  
+            android:id="@+id/mybianqian"
+	        android:layout_width="fill_parent"  
+	        android:layout_height="wrap_content"  
+	        android:textSize="16sp"
+	        android:hint="无便签，来一个吧！" />   
+       <Button
+		    android:id="@+id/id_chuangjian"
+			android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/mybianqian"
+			android:layout_alignParentBottom="true"
+			 android:background="@layout/shape1"
+			android:text="创建" />
+	  <Button
+			android:id="@+id/yuyin"
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignBaseline="@+id/id_chuangjian"
+			android:layout_alignBottom="@+id/id_chuangjian" 
+			android:layout_centerInParent="true"
+			android:background="@layout/shape2"
+			android:text="语音" />
+		<Button
+			android:id="@+id/id_fangqi"
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignBaseline="@+id/id_chuangjian"
+			android:layout_alignBottom="@+id/id_chuangjian"  
+			android:layout_alignParentRight="true"
+			 android:background="@layout/shape3"
+			android:text="取消" />
+  	    
+</RelativeLayout>  
+<!-- 更多 -->
+<RelativeLayout 
+	android:id="@+id/gengduo"
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    android:paddingBottom="@dimen/activity_vertical_margin"  
+    android:paddingLeft="@dimen/activity_horizontal_margin"  
+    android:paddingRight="@dimen/activity_horizontal_margin"  
+    android:paddingTop="@dimen/activity_vertical_margin"  
+    tools:context=".HomeActivity" >  
+      <ExpandableListView 
+       android:id="@id/android:list"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:drawSelectorOnTop="false" 
+       android:paddingBottom="170dp">  
+    </ExpandableListView> 
+ 
+      <TextView 
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"
+       	android:layout_alignParentBottom="true" 
+       	android:paddingBottom="150dp"
+       	android:layout_centerInParent="true" 
+       	android:textSize="16sp"
+        android:text="关 于"/>
+      <TextView 
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"
+       	android:layout_alignParentBottom="true" 
+       	android:paddingBottom="40dp"
+        android:text="@string/about"/>
+</RelativeLayout>  
+
+<!-- 资讯 -->
+<RelativeLayout 
+	android:id="@+id/zixun"
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    android:paddingBottom="@dimen/activity_vertical_margin"  
+    android:paddingLeft="@dimen/activity_horizontal_margin"  
+    android:paddingRight="@dimen/activity_horizontal_margin"  
+    android:paddingTop="@dimen/activity_vertical_margin"  
+    tools:context=".HomeActivity" >  
+      
+    <ListView 
+        android:id="@+id/id_lv_zixun"
+        android:layout_width="match_parent"  
+    	android:layout_height="match_parent" />
+    
+	</RelativeLayout>  
+
+    </FrameLayout>
+</LinearLayout>
+
+</TabHost>
+ 
+    <!-- 侧面布局 -->
+   <LinearLayout  
+      android:id="@+id/id_drawer"  
+      android:layout_width="240dp"  
+      android:layout_height="match_parent"  
+      android:layout_gravity="start"  
+      android:background="#ffffff"
+      android:orientation="vertical" > 
+      
+      <RelativeLayout
+        android:id="@+id/switch_face_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="0dip" 
+        android:clickable="true" 
+        android:background="@layout/side_nav_bar"
+        android:padding="0dip" >
+ 
+        <org.loader.labelview.CircleImageView
+	    android:id="@+id/face"
+	    android:layout_width="140dp"
+	    android:layout_height="140dp"
+	    android:layout_centerHorizontal="true"
+	    android:layout_gravity="center_vertical"
+	    android:src="@drawable/me" />
+        
+    	</RelativeLayout>
+        <ListView   
+          	android:id="@+id/id_lv"  
+            android:layout_width="fill_parent"  
+            android:layout_height="wrap_content"  
+            android:paddingTop="70dp"
+            android:paddingLeft="12dp"
+       	    android:typeface="monospace">   
+       </ListView>
+         
+   </LinearLayout>
+    
+</android.support.v4.widget.DrawerLayout>  

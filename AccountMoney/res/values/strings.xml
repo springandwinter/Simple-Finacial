@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AccountantMoney</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="main">简约理财</string>
+	<string name="first_tip">first</string>
+	<string name="second_tip">secondt</string>
+	<string name="third_tip">third</string>
+	<string name="four_tip">four</string>
+	<string name="five_tip">five</string>
+	<string name="outcount">支出</string>
+	<string name="incount">收入</string>
+	<string name="showinfo">数据管理</string>
+	<string name="infomanage">数据管理</string>
+	<string name="search_label">xxxs</string>   
+	<string name="sysset">sysset</string>
+	<string name="action1">明 细</string>
+	<string name="action2">删 除 </string>
+    <string name="action3">变 色 </string>
+    <string name="flagmanage">便签管理</string>
+	<string name="about">该产品是根据研究众多人的因不知道自己的钱花在哪里了，为此该款软件可以帮助解决我们的问题，让Money无处可逃,有关该软件的不足之处，恳请提出建议！</string>
+	<string-array name="spLiuruType">
+	    <item >现 金</item>
+        <item >支付宝</item>
+        <item >余额宝</item>
+        <item >银行卡</item> 
+	</string-array>
+	<string-array name="type" >
+        <item >早 餐</item>
+        <item >中 餐</item>
+        <item >晚 餐</item>
+        <item >购 物</item>
+        <item >转 帐</item>
+        <item >请 客</item>
+        <item >理 发</item>
+        <item >旅 游</item>
+        <item >其 他</item>
+        <item >现 金</item>
+        <item >支付宝</item>
+        <item >余额宝</item>
+        <item >银行卡</item> 
+	</string-array>   
+	<string-array name="zhifutype">
+	    <item >现金</item>
+	    <item >支付宝</item>
+	    <item >银行卡</item> 
+	    <item >余额宝</item>  
+	</string-array>
+	<string-array name="intype">
+	    <item >现 金</item>
+        <item >支付宝</item>
+        <item >余额宝</item>
+        <item >银行卡</item> 
+	</string-array>
+</resources>

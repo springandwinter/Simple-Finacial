@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.accountantmoney"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/chu"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="org.loader.labelview.StartActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> 
+        <activity android:name="org.loader.labelview.FlagManage" android:label="@string/flagmanage"></activity>
+        <activity android:name="org.loader.labelview.Sysset" android:label="@string/sysset"></activity>
+        <activity android:name="org.loader.labelview.InfoManage" android:label="@string/infomanage"></activity>
+        <activity android:name="org.loader.labelview.Outaccountinfo" android:label="@string/outcount"></activity>
+        <activity android:name="org.loader.labelview.Inaccountinfo" android:label="@string/incount"></activity>
+        <activity android:name="org.loader.labelview.Showinfo" android:label="@string/showinfo"></activity>
+        <activity android:name="org.loader.labelview.MainActivity" android:label="@string/main"></activity> 
+        <activity android:name="org.loader.labelview.SecondActivity" android:label="@string/main"></activity> 
+        <activity android:name="org.loader.labelview.ThirdActivity" android:label="@string/main"></activity> 
+        <activity android:name="org.loader.labelview.TagCloudActivity" android:label="@string/main"></activity> 
+        <activity android:name="org.loader.labelview.UrlLicaiActivity" android:label="@string/main"></activity> 
+        <activity android:name="org.loader.labelview.UrlZixunActivity" android:label="@string/main"></activity>  
+    </application>
+
+</manifest>

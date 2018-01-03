@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent" 
+	android:layout_height="match_parent" 
+	android:background="#F5F5F5" 
+	android:weightSum="1">
+	<LinearLayout 
+	    	android:id="@+id/linearLayout1"
+			android:layout_height="wrap_content" 
+			android:layout_width="match_parent"
+			android:layout_marginTop="30dp" 
+			android:orientation="vertical" 
+			android:layout_weight="0.06">
+	<RelativeLayout 
+		    android:layout_height="wrap_content" 
+		    android:layout_width="match_parent">
+		<TextView 
+		    android:id="@+id/tv_zixun"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center" 
+		    android:textSize="20dp"
+		    android:textColor="#8C6931"/>
+		<ImageButton
+		    android:id="@+id/fanhui"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_centerVertical="true"  
+		    android:src="@drawable/fanhui"
+		    android:background="#F5F5F5" /> 
+	</RelativeLayout>
+	</LinearLayout>
+	<WebView 
+	    android:id="@+id/wb_zixun"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" />
+
+</LinearLayout>

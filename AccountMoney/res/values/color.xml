@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red">#f5c662</color>
+    <color name="blue">#96cff7</color>
+    <color name="white">#fafafa</color>
+    <color name="white_dark">#f3f3f3</color>
+
+    <color name="gray_light">#cccccc</color>
+    <color name="gray">#777</color>
+    <color name="gray_dark">#383838</color>
+
+    <color name="green_light">#8e9ea4</color>
+    <color name="green">#34515c</color>
+    <color name="green_dark">#1e3e4a</color>
+
+    <color name="night_mask">#90000000</color>
+    <color name="colorPrimary">#ff333333</color>
+    <color name="colorPrimaryDark">#ff222222</color>
+    <color name="colorAccent">#ff80bd01</color>
+    <color name="act_background_black_white">#ff000000</color>
+    <color name="text_black_white">#ffffff</color>
+    
+</resources>

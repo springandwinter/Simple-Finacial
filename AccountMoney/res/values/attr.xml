@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color"></attr>
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="LabelView">
+        <attr name="is_static" format="boolean" />
+    </declare-styleable>
+	<attr name="containerBackground" format="reference|color"></attr>
+    <attr name="cardBackground" format="reference|color"></attr>
+    <attr name="titleColor" format="reference|color"></attr>
+    <attr name="textColor" format="reference|color"></attr>
+    <attr name="selectorBtn" format="reference"></attr>
+    <attr name="selectorListItem" format="reference"></attr>
+    
+</resources>
